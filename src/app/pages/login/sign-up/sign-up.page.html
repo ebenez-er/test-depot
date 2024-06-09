@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Inscription Étudiant
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/auth"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="d-flex-center">
+    <form [formGroup]="form" class="auth-form" (ngSubmit)="submit()" (keypress.enter)="submit()">
+      <ion-item>
+        <ion-label position="stacked">Nom</ion-label>
+        <ion-input formControlName="nom" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Prénom</ion-label>
+        <ion-input formControlName="prenom" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Date de Naissance</ion-label>
+        <ion-input formControlName="date_naissance" type="date"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Lieu de Naissance</ion-label>
+        <ion-input formControlName="lieu_naissance" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Nationalité</ion-label>
+        <ion-input formControlName="nationalite" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Adresse</ion-label>
+        <ion-input formControlName="adresse" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Téléphone</ion-label>
+        <ion-input formControlName="tel" type="tel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input formControlName="email" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Mot de Passe</ion-label>
+        <ion-input formControlName="mot_de_passe" type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Acte de Naissance (PDF)</ion-label>
+        <input type="file" (change)="onFileSelected($event, 'acte_de_naissance')" accept=".pdf">
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Bulletins (PDF)</ion-label>
+        <input type="file" (change)="onFileSelected($event, 'bulletins')" accept=".pdf">
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Demi Carte Photo (Image)</ion-label>
+        <input type="file" (change)="onFileSelected($event, 'demi_carte_photo')" accept="image/*">
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Diplômes (PDF)</ion-label>
+        <input type="file" (change)="onFileSelected($event, 'diplomes')" accept=".pdf">
+      </ion-item>
+      <ion-button expand="block" mode="ios" class="submit" type="submit" [disabled]="form.invalid">
+        S'inscrire
+        <ion-icon slot="end" name="log-in-outline"></ion-icon>
+      </ion-button>
+    </form>
+  </div>
+</ion-content>

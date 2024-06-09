@@ -1,0 +1,119 @@
+<ion-split-pane when="md" contentId="main">
+
+  <!-- Menu latéral gauche -->
+  <ion-menu persistent="true" side="start" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          Menu gauche
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!-- Actions spécifiques à l'enseignant -->
+        <ion-item>
+          <ion-icon name="time"></ion-icon>
+          Emploi du temps
+        </ion-item>
+        <ion-item>
+          <ion-icon name="school"></ion-icon>
+          Gestion de classe
+        </ion-item>
+        <ion-item>
+          <ion-icon name="document-text"></ion-icon>
+          Notes et évaluations des étudiants
+        </ion-item>
+        <ion-item>
+          <ion-icon name="chatbubbles"></ion-icon>
+          Communication avec les parents et l'administration
+        </ion-item>
+        <!-- Ajoutez d'autres éléments de menu selon les besoins -->
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Contenu principal -->
+  <div class="ion-page" id="main">
+    <ion-content>
+      <ion-searchbar></ion-searchbar>
+      <ion-grid>
+        <!-- Widgets spécifiques à l'enseignant -->
+        <ion-row>
+          <ion-col size="12">
+            <!-- Widget pour afficher l'emploi du temps -->
+            <ion-card>
+              <ion-card-header>
+                Emploi du temps
+              </ion-card-header>
+              <ion-card-content>
+                <!-- Contenu dynamique à afficher -->
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12">
+            <!-- Widget pour la gestion de classe -->
+            <ion-card>
+              <ion-card-header>
+                Gestion de classe
+              </ion-card-header>
+              <ion-card-content>
+                <!-- Contenu dynamique à afficher -->
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12">
+            <!-- Widget pour afficher les notes et évaluations des étudiants -->
+            <ion-card>
+              <ion-card-header>
+                Notes et évaluations des étudiants
+              </ion-card-header>
+              <ion-card-content>
+                <!-- Contenu dynamique à afficher -->
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12">
+            <!-- Widget pour communiquer avec les parents et l'administration -->
+            <ion-card>
+              <ion-card-header>
+                Communication avec les parents et l'administration
+              </ion-card-header>
+              <ion-card-content>
+                <!-- Contenu dynamique à afficher -->
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <!-- Ajoutez d'autres widgets selon les besoins -->
+      </ion-grid>
+    </ion-content>
+  </div>
+
+  <!-- Menu latéral droit -->
+  <ion-menu persistent="true" side="end" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          Menu droit
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!-- Actions spécifiques à l'enseignant -->
+        <ion-item>
+          Notifications
+        </ion-item>
+        <ion-item>
+          Activités
+        </ion-item>
+        <ion-item>
+          Groupes
+        </ion-item>
+        <!-- Ajoutez d'autres éléments de menu selon les besoins -->
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+</ion-split-pane>

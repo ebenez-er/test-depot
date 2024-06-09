@@ -1,0 +1,119 @@
+<ion-split-pane when="md" contentId="main">
+
+  <!-- Menu latéral gauche -->
+  <ion-menu persistent="true" side="start" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          Menu gauche
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!-- Actions spécifiques à l'étudiant -->
+        <ion-item>
+          <ion-icon name="time"></ion-icon>
+          Emploi du temps
+        </ion-item>
+        <ion-item>
+          <ion-icon name="school"></ion-icon>
+          Notes et résultats
+        </ion-item>
+        <ion-item>
+          <ion-icon name="document-text"></ion-icon>
+          Demandes de congé et d'absence
+        </ion-item>
+        <ion-item>
+          <ion-icon name="book"></ion-icon>
+          Ressources pédagogiques
+        </ion-item>
+        <!-- Ajoutez d'autres éléments de menu selon les besoins -->
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Contenu principal -->
+  <div class="ion-page" id="main">
+    <ion-content>
+      <ion-searchbar></ion-searchbar>
+      <ion-grid>
+        <!-- Widgets spécifiques à l'étudiant -->
+        <ion-row>
+          <ion-col size="12">
+            <!-- Widget pour afficher l'emploi du temps -->
+            <ion-card>
+              <ion-card-header>
+                Emploi du temps
+              </ion-card-header>
+              <ion-card-content>
+                <!-- Contenu dynamique à afficher -->
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12">
+            <!-- Widget pour afficher les notes et résultats -->
+            <ion-card>
+              <ion-card-header>
+                Notes et résultats
+              </ion-card-header>
+              <ion-card-content>
+                <!-- Contenu dynamique à afficher -->
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12">
+            <!-- Widget pour envoyer des demandes de congé ou d'absence -->
+            <ion-card>
+              <ion-card-header>
+                Demandes de congé et d'absence
+              </ion-card-header>
+              <ion-card-content>
+                <!-- Contenu dynamique à afficher -->
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12">
+            <!-- Widget pour accéder aux ressources pédagogiques -->
+            <ion-card>
+              <ion-card-header>
+                Ressources pédagogiques
+              </ion-card-header>
+              <ion-card-content>
+                <!-- Contenu dynamique à afficher -->
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <!-- Ajoutez d'autres widgets selon les besoins -->
+      </ion-grid>
+    </ion-content>
+  </div>
+
+  <!-- Menu latéral droit -->
+  <ion-menu persistent="true" side="end" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          Menu droit
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!-- Actions spécifiques à l'étudiant -->
+        <ion-item>
+          Notifications
+        </ion-item>
+        <ion-item>
+          Activités
+        </ion-item>
+        <ion-item>
+          Groupes
+        </ion-item>
+        <!-- Ajoutez d'autres éléments de menu selon les besoins -->
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+</ion-split-pane>

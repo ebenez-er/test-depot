@@ -1,0 +1,200 @@
+<ion-split-pane when="md" contentId="main">
+
+
+  <ion-menu contentId="main" persistent="true"side="start" >
+    <!-- Menu latéral gauche -->
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          Menu gauche
+
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          Acceuil
+
+        </ion-item>
+        <ion-item>
+          communications
+        </ion-item>
+        <ion-item>
+
+          cours
+
+        </ion-item>
+        <ion-item>
+          Étudiants
+        </ion-item>
+        <ion-item>
+          Enseignants
+        </ion-item>
+        <ion-item>
+
+          emploi-du-temps
+
+        </ion-item>
+        <ion-item>
+          inscription
+        </ion-item>
+
+        <ion-item>
+          Parents
+        </ion-item>
+        <ion-item>
+
+          frais de scolarité
+
+        </ion-item>
+        <ion-item>
+          Salles
+        </ion-item>
+        <ion-item>
+          Profils
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-menu contentId="main" persistent="true" side="end"   id="menu-droit">
+    <!-- Menu latéral droit -->
+    <ion-header>
+      <ion-toolbar>
+       <ion-buttons slot="end">
+        <ion-title>
+          Menu droit
+        </ion-title>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          notifications
+        </ion-item>
+        <ion-item>
+          activités
+        </ion-item>
+        <ion-item>
+          groupes
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+    <div class="ion-page" id="main">
+      <ion-searchbar></ion-searchbar>
+    <ion-content  class="ion-padding">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <!-- Widget 1 -->
+            <ion-card>
+              <ion-card-header>
+                informations personnelles
+              </ion-card-header>
+              <ion-card-content>
+
+          <!-- Champs pour l'inscription -->
+          <app-custom-input [control]="lastNameControl" type="text" label="Nom"></app-custom-input>
+          <app-custom-input [control]="emailControl" type="email" label="Email"></app-custom-input>
+          <app-custom-input [control]="passwordControl" type="password" label="Mot de passe"></app-custom-input>
+          <app-custom-input [control]="phoneNumberControl" type="tel" label="Numéro de téléphone"></app-custom-input>
+          <app-custom-input [control]="addressControl" type="text" label="Adresse"></app-custom-input>
+          <app-custom-input [control]="dateOfBirthControl" type="date" label="Date de naissance"></app-custom-input>
+          <app-custom-input [control]="placeOfBirthControl" type="text" label="Lieu de naissance"></app-custom-input>
+          <app-custom-input [control]="nationalityControl" type="text" label="Nationalité"></app-custom-input>
+          <app-custom-input [control]="firstNameControl" type="text" label="Prénom"></app-custom-input>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="6">
+          <!-- Champs spécifiques pour l'inscription -->
+          <ion-card>
+            <ion-card-header>
+              niveau d'étude
+            </ion-card-header>
+            <ion-card-content>
+                <ion-item>
+            <ion-label>Cycle</ion-label>
+            <ion-select formControlName="cycleControl">
+              <ion-select-option value="licence">Licence</ion-select-option>
+              <ion-select-option value="master">Master</ion-select-option>
+              <ion-select-option value="doctorat">Doctorat</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label>classe</ion-label>
+            <ion-select formControlName="cycleControl">
+              <ion-select-option value="licence1">L1</ion-select-option>
+              <ion-select-option value="licence2">L2</ion-select-option>
+              <ion-select-option value="licence3">L3</ion-select-option>
+              <ion-select-option value="master1">M1</ion-select-option>
+              <ion-select-option value="master2">M2</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label>Filière</ion-label>
+            <ion-select formControlName="cycleControl">
+              <ion-select-option value="informatique">IIRT</ion-select-option>
+              <ion-select-option value="droit">DAF</ion-select-option>
+              <ion-select-option value="tronc-commun">TC</ion-select-option>
+              <ion-select-option value="comptabilité">COMPTA</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+    </ion-card-content>
+    </ion-card>
+    </ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-col size="12">
+          <!-- Champs pour le téléversement de documents -->
+          <ion-card>
+            <ion-card-header>
+              DOcuments
+            </ion-card-header>
+            <ion-card-content>
+          <ion-item>
+            <ion-label>Téléverser Acte de Naissance (PDF)</ion-label>
+            <input type="file" accept=".pdf" (change)="onFileChange('acteDeNaissance', $event)">
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Téléverser Demi-Carte Photo</ion-label>
+            <input type="file" accept="image/*" (change)="onFileChange('demiCartePhoto', $event)">
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Téléverser Bulletins des Années Antérieures</ion-label>
+            <input type="file" accept=".pdf" (change)="onFileChange('bulletins', $event)">
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Téléverser Copie d'Examen</ion-label>
+            <input type="file" accept=".pdf" (change)="onFileChange('copieExamen', $event)">
+          </ion-item>
+
+
+          <ion-button expand="block" mode="ios" class="submit" type="submit" [disabled]="inscriptionForm.invalid">
+            S'inscrire
+            <ion-icon slot="end" name="person-add-outline"></ion-icon>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    </ion-row>
+    </ion-grid>
+    </ion-content>
+  </div>
+
+
+
+<!-- Placez le reste de votre contenu ici -->
+
+
+</ion-split-pane>
+

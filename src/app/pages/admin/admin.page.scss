@@ -1,0 +1,21 @@
+.menu-reduit {
+  width: 200px; /* Vous pouvez ajuster la largeur selon vos besoins */
+
+}
+/* student.component.css */
+.student-icon {
+  font-size: 24px; /* Taille de l'icône */
+  color: #000; /* Couleur de l'icône */
+  display: flex;
+  align-items: center;
+}
+.custom-icon {
+  width: 40px;  /* Ajustez la largeur selon vos besoins */
+  height: 40px; /* Ajustez la hauteur selon vos besoins */
+  object-fit: cover; /* Pour s'assurer que l'image est bien ajustée */
+}
+.custom-icon1 {
+  width: 70px;  /* Ajustez la largeur selon vos besoins */
+  height: 70px; /* Ajustez la hauteur selon vos besoins */
+  object-fit: cover; /* Pour s'assurer que l'image est bien ajustée */
+}

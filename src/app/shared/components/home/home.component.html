@@ -1,0 +1,19 @@
+<!-- home.component.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Gestion des établissements
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let etablissement of etablissements">
+      <ion-label (click)="ouvrirConnexion(etablissement.id)">{{ etablissement.nom }}</ion-label>
+      <ion-button fill="outline" (click)="supprimerEtablissement(etablissement.id)">Supprimer</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" routerLink="/ajouter-etablissement">Ajouter un établissement</ion-button>
+</ion-content>

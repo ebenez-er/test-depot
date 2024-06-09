@@ -1,0 +1,84 @@
+ion-menu {
+  --ion-background-color: #2b2b2b;
+  --ion-text-color: #ffffff;
+}
+
+ion-item {
+  --ion-background-color: transparent;
+  --ion-text-color: #ffffff;
+}
+
+.menu-icon {
+  color: #ffffff;
+
+}
+
+/* Card colors */
+.classes-card {
+  --ion-background-color: #59BBF3;
+  height: 100px
+}
+
+.emploi-du-temps-card {
+  --ion-background-color: #F5A305;
+  height: 100px
+}
+
+.etudiants-card {
+  --ion-background-color: #f33218;
+  height: 100px
+
+}
+
+.enseignant-card {
+  --ion-background-color: #59BBF3;
+  height: 100px
+}
+
+.message-card {
+  --ion-background-color: #0360CD;
+  height: 100px
+}
+
+.activites-card {
+  --ion-background-color: #0360CD;
+  height: 100px
+}
+
+.notes-card {
+  --ion-background-color: #049246;
+  height: 100px
+}
+
+.inscriptions-card {
+  --ion-background-color: #F05D5E;
+  height: 100px
+}
+
+.Filière-card {
+  --ion-background-color: #EC1E75;
+  height: 100px
+}
+.icon{
+  width: 60px;
+  height: 60px;
+  opacity: 0.5;
+}
+.sous-menu{
+  position:absolute;
+  right: 20px;;
+}
+.count{
+  position: absolute;
+  top: 0;
+  left: -19px;
+  margin-top: -10px;
+  transform: translate(1, 6);
+
+}
+.sous{
+  left: 70px;
+}
+
+
+

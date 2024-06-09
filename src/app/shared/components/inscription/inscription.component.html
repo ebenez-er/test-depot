@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides  pager="true"  #slides>
+    <ion-slide>
+      <h1>Page 1</h1>
+      <!-- Formulaire de début ici -->
+      <app-custom-input [control]="lastNameControl" type="text" label="Nom"></app-custom-input>
+      <app-custom-input [control]="firstNameControl" type="text" label="Prénom"></app-custom-input>
+      <app-custom-input [control]="emailControl" type="email" label="Email"></app-custom-input>
+      <ion-button (click)="next()">Suivant</ion-button>
+    </ion-slide>
+
+    <ion-slide   pager="true" [options]="slideOpts">
+      <h1>Page 2</h1>
+      <!-- Suite du formulaire ici -->
+      <app-custom-input [control]="passwordControl" type="password" label="Mot de passe"></app-custom-input>
+      <app-custom-input [control]="phoneNumberControl" type="tel" label="Numéro de téléphone"></app-custom-input>
+      <app-custom-input [control]="addressControl" type="text" label="Adresse"></app-custom-input>
+      <ion-button (click)="next()">Suivant</ion-button>
+    </ion-slide>
+
+    <ion-slide  pager="true" [options]="slideOpts">
+      <h1>Page 3</h1>
+      <!-- Fin du formulaire ici -->
+      <app-custom-input [control]="dateOfBirthControl" type="date" label="Date de naissance"></app-custom-input>
+      <app-custom-input [control]="placeOfBirthControl" type="text" label="Lieu de naissance"></app-custom-input>
+      <app-custom-input [control]="nationalityControl" type="text" label="Nationalité"></app-custom-input>
+      <ion-button (click)="signUp()">S'inscrire</ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
